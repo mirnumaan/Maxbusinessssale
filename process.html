@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Process | MAX Premium Business Sales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F3057',
+                        secondary: '#00587A',
+                        accent: '#008891',
+                        light: '#E7F2F8',
+                        dark: '#1A1A1A',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #0F3057 0%, #00587A 100%);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #008891;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .active::after {
+            width: 100%;
+        }
+        
+        .process-step {
+            transition: all 0.3s ease;
+        }
+        
+        .process-step:hover {
+            transform: translateY(-5px);
+        }
+        
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Mobile call button */
+        .call-now-button {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .call-now-button {
+                display: flex;
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                z-index: 50;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Mobile Call Now Button -->
+    <a href="tel:+61000000000" class="call-now-button bg-accent hover:bg-secondary text-white font-semibold rounded-full p-4 shadow-lg flex items-center justify-center">
+        <i class="fas fa-phone-alt mr-2"></i>
+        <span>Call Now</span>
+    </a>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full bg-white shadow-md z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-primary">
+                MAX<span class="text-accent">.</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link text-primary hover:text-accent font-medium active">Home</a>
+                <a href="process.html" class="nav-link text-primary hover:text-accent font-medium">Process</a>
+                <a href="about.html" class="nav-link text-primary hover:text-accent font-medium">About MAX</a>
+                <a href="valuation.html" class="nav-link text-primary hover:text-accent font-medium">Valuation &amp; Strategy</a>
+                <a href="contact.html" class="nav-link text-primary hover:text-accent font-medium">Contact</a>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden text-primary focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+                <a href="index.html" class="text-primary hover:text-accent font-medium py-2">Home</a>
+                <a href="process.html" class="text-primary hover:text-accent font-medium py-2">Process</a>
+                <a href="about.html" class="text-primary hover:text-accent font-medium py-2">About MAX</a>
+                <a href="valuation.html" class="text-primary hover:text-accent font-medium py-2">Valuation &amp; Strategy</a>
+                <a href="contact.html" class="text-primary hover:text-accent font-medium py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-24 md:pt-32 pb-16 gradient-bg">
+        <div class="container mx-auto px-4 text-center text-white">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Sale Process</h1>
+            <p class="text-xl max-w-3xl mx-auto">
+                A structured approach designed to maximize value and minimize disruption to your business operations.
+            </p>
+        </div>
+    </section>
+
+    <!-- Process Detail Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <p class="text-lg text-gray-700 mb-12">
+                    At MAX, we've developed a comprehensive process that guides business owners through every stage of selling their business. Our structured approach ensures clarity, minimizes uncertainty, and is designed to achieve the best possible outcome for your business sale.
+                </p>
+                
+                <div class="space-y-16">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/3 mb-6 md:mb-0">
+                            <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold mb-4">1</div>
+                            <h2 class="text-2xl font-bold text-primary">Discovery &amp; Valuation</h2>
+                        </div>
+                        <div class="md:w-2/3 md:pl-8">
+                            <p class="mb-4 text-gray-700">
+                                We begin with a comprehensive assessment of your business, analyzing financial performance, operational structure, market position, and growth potential. This phase includes:
+                            </p>
+                            <ul class="space-y-2 mb-6 text-gray-700">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                                    <span>In-depth business analysis and market-based valuation</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                                    <span>Identification of key value drivers and potential challenges</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                                    <span>Development of a tailored sale strategy and timeline</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                                    <span>Establishment of realistic price expectations</span>
+                                </li>
+                            </ul>
+                            <p class="text-gray-700">
+                                This phase typically takes 2-3 weeks and concludes with a detailed valuation report and strategic sale plan.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/3 mb-6 md:mb-0">
+                            <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold mb-4">2</div>
+                            <h2 class="text-2xl font-bold text-primary">Preparation &amp; Marketing</h2>
+                        </div>
+                        <div class="md:w-2/3 md:pl-8">
+                            <p class="mb-4 text-gray-700">
+                                Once the strategy is approved, we prepare professional marketing materials and identify potential buyers. This phase includes:
+                            </p>
+                            <ul class="space-y-2 mb-6 text-gray-700">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                                    <span>Development of a comprehensive Information Memorandum</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                                    <span>Creation of a blind profile for initial buyer approaches</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                                    <span>Targeted research to identify strategic and financial buyers</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                                    <span>Confidential approach to qualified potential buyers</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                                    <span>Management of NDAs and initial buyer screening</span>
+                                </li>
+                            </ul>
+                            <p class="text-gray-700">
+                                This phase typically takes 4-6 weeks and is conducted with strict confidentiality protocols to protect your business.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/3 mb-6 md:mb-0">
+                            <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold mb-4">3</div>
+                            <h2 class="text-2xl font-bold text-primary">Negotiation &amp; Due Diligence</h2>
+                        </div>
+                        <div class="md:w-2/3 md:pl-8">
+                            <p class="mb-4 text-gray-700">
+                                As interested buyers emerge, we manage negotiations and the due diligence process to protect your interests. This phase includes:
+                            </p>
+                            <ul class="space-y-2 mb-6 text-gray-700">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                                    <span>Facilitation of management meetings with qualified buyers</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                                    <span>Negotiation of offers and deal structures</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                                    <span>Coordination of the due diligence process</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                                    <span>Management of data room and information requests</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                                    <span>Resolution of issues that arise during due diligence</span>
+                                </li>
+                            </ul>
+                            <p class="text-gray-700">
+                                This phase typically takes 8-12 weeks and is the most intensive part of the process, requiring careful management to maintain deal momentum.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/3 mb-6 md:mb-0">
+                            <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold mb-4">4</div>
+                            <h2 class="text-2xl font-bold text-primary">Closing &amp; Transition</h2>
+                        </div>
+                        <div class="md:w-2/3 md:pl-8">
+                            <p class="mb-4 text-gray-700">
+                                Once due diligence is complete, we coordinate the closing process and help plan for a smooth transition. This phase includes:
+                            </p>
+                            <ul class="space-y-2 mb-6 text-gray-700">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                                    <span>Coordination with legal teams on final documentation</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                                    <span>Management of closing conditions and regulatory approvals</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                                    <span>Development of transition plans for staff and clients</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                                    <span>Coordination of closing logistics and funds transfer</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                                    <span>Post-closing support during the transition period</span>
+                                </li>
+                            </ul>
+                            <p class="text-gray-700">
+                                This final phase typically takes 4-6 weeks and ensures a clean transaction with minimal disruption to business operations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary">Typical Timeline</h2>
+            
+            <div class="max-w-4xl mx-auto relative">
+                <!-- Timeline Line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary"></div>
+                
+                <!-- Timeline Items -->
+                <div class="space-y-12">
+                    <!-- Month 1 -->
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-8 md:text-right mb-4 md:mb-0">
+                            <h3 class="text-xl font-semibold text-primary">Month 1</h3>
+                            <p class="text-gray-700">Discovery, valuation, and strategy development</p>
+                        </div>
+                        <div class="z-10 w-8 h-8 rounded-full bg-accent border-4 border-white"></div>
+                        <div class="md:w-1/2 md:pl-8">
+                            <p class="text-gray-700">
+                                Initial meetings, business analysis, and development of sale strategy
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Month 2-3 -->
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-8 md:text-right mb-4 md:mb-0">
+                            <h3 class="text-xl font-semibold text-primary">Month 2-3</h3>
+                            <p class="text-gray-700">Preparation and initial marketing</p>
+                        </div>
+                        <div class="z-10 w-8 h-8 rounded-full bg-accent border-4 border-white"></div>
+                        <div class="md:w-1/2 md:pl-8">
+                            <p class="text-gray-700">
+                                Creation of marketing materials, buyer research, and initial approaches
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Month 4-6 -->
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-8 md:text-right mb-4 md:mb-0">
+                            <h3 class="text-xl font-semibold text-primary">Month 4-6</h3>
+                            <p class="text-gray-700">Buyer engagement and negotiations</p>
+                        </div>
+                        <div class="z-10 w-8 h-8 rounded-full bg-accent border-4 border-white"></div>
+                        <div class="md:w-1/2 md:pl-8">
+                            <p class="text-gray-700">
+                                Management meetings, offer negotiations, and selection of preferred buyer
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Month 7-9 -->
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-8 md:text-right mb-4 md:mb-0">
+                            <h3 class="text-xl font-semibold text-primary">Month 7-9</h3>
+                            <p class="text-gray-700">Due diligence and documentation</p>
+                        </div>
+                        <div class="z-10 w-8 h-8 rounded-full bg-accent border-4 border-white"></div>
+                        <div class="md:w-1/2 md:pl-8">
+                            <p class="text-gray-700">
+                                Buyer due diligence, contract negotiations, and preparation for closing
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Month 10 -->
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-8 md:text-right mb-4 md:mb-0">
+                            <h3 class="text-xl font-semibold text-primary">Month 10</h3>
+                            <p class="text-gray-700">Closing and transition</p>
+                        </div>
+                        <div class="z-10 w-8 h-8 rounded-full bg-accent border-4 border-white"></div>
+                        <div class="md:w-1/2 md:pl-8">
+                            <p class="text-gray-700">
+                                Final documentation, closing, and transition support
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="text-center mt-12 text-gray-700">
+                    <em>Note: Timeline is indicative and may vary based on business complexity and market conditions.</em>
+                </p>
+            </div>
+        </div>
+        <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary">Frequently Asked Questions</h2>
+            
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="bg-light p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-3 text-primary">How long does the entire sale process typically take?</h3>
+                    <p class="text-gray-700">
+                        For businesses valued at $5M and above, the process typically takes 8-12 months from initial engagement to closing. Complex businesses or challenging market conditions may extend this timeline.
+                    </p>
+                </div>
+                
+                <div class="bg-light p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-3 text-primary">How is confidentiality maintained during the sale process?</h3>
+                    <p class="text-gray-700">
+                        We implement strict confidentiality protocols, including blind profiles, signed NDAs before information disclosure, controlled information release, and careful management of site visits and management meetings.
+                    </p>
+                </div>
+                
+                <div class="bg-light p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-3 text-primary">When should I tell my employees about the sale?</h3>
+                    <p class="text-gray-700">
+                        This is a delicate decision that varies by business. Generally, we recommend limiting knowledge to key executives until later stages of the process. We'll help develop a communication strategy that minimizes disruption.
+                    </p>
+                </div>
+                
+                <div class="bg-light p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-3 text-primary">What makes MAX's process different from other business brokers?</h3>
+                    <p class="text-gray-700">
+                        Our process is specifically designed for premium businesses and includes more comprehensive buyer research, higher quality marketing materials, and a team-based approach with specialists in valuation, legal considerations, and transaction management.
+                    </p>
+                </div>
+                
+                <div class="bg-light p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-3 text-primary">How involved will I need to be during the sale process?</h3>
+                    <p class="text-gray-700">
+                        While we manage the process to minimize disruption to your business operations, your involvement is critical at key decision points and during management meetings with potential buyers. We'll work around your schedule and prepare you thoroughly for each step.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 gradient-bg text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to begin your business sale journey?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">
+                Schedule your confidential discovery call to discuss how our structured process can help you achieve the best outcome for your business sale.
+            </p>
+            <a href="contact.html" class="cta-button inline-block bg-accent hover:bg-secondary text-white font-semibold py-3 px-8 rounded-md">
+                Contact Us Today
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-4">MAX<span class="text-accent">.</span></h3>
+                    <p class="max-w-xs">
+                        Premium business sales for companies valued at $5M and above. A division of Xcllusive Business Sales.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="font-semibold mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="index.html" class="hover:text-accent">Home</a></li>
+                            <li><a href="process.html" class="hover:text-accent">Process</a></li>
+                            <li><a href="about.html" class="hover:text-accent">About MAX</a></li>
+                            <li><a href="valuation.html" class="hover:text-accent">Valuation &amp; Strategy</a></li>
+                            <li><a href="contact.html" class="hover:text-accent">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-semibold mb-4">Contact</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                <span>Sydney, Australia</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-phone-alt mr-2"></i>
+                                <span>+61 (0) 2 9817 3331</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-envelope mr-2"></i>
+                                <span>enquiries@maxbusinesssales.com.au</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-semibold mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="hover:text-accent">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="hover:text-accent">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                            <a href="#" class="hover:text-accent">
+                                <i class="fab fa-facebook text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white border-opacity-20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p>© 2025 MAX Business Sales. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-accent">Privacy Policy</a>
+    </footer>
+</body>
+</html>      </div>
+            </div>
+        </div>
+    </footer>
+</section>

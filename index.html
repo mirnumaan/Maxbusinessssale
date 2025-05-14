@@ -1,0 +1,560 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAX Premium Business Sales | Sell Your Business With Certainty</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F3057',
+                        secondary: '#00587A',
+                        accent: '#008891',
+                        light: '#E7F2F8',
+                        dark: '#1A1A1A',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #0F3057 0%, #00587A 100%);
+        }
+        
+        .section-transition {
+            position: relative;
+            height: 100px;
+            overflow: hidden;
+        }
+        
+        .section-transition::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom right, transparent 49.5%, white 50%);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #008891;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .active::after {
+            width: 100%;
+        }
+        
+        .process-step {
+            transition: all 0.3s ease;
+        }
+        
+        .process-step:hover {
+            transform: translateY(-5px);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.02);
+        }
+        
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Mobile call button */
+        .call-now-button {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .call-now-button {
+                display: flex;
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                z-index: 50;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-dark">
+    <!-- Mobile Call Now Button -->
+    <a href="tel:+61000000000" class="call-now-button bg-accent hover:bg-secondary text-white font-semibold rounded-full p-4 shadow-lg flex items-center justify-center">
+        <i class="fas fa-phone-alt mr-2"></i>
+        <span>Call Now</span>
+    </a>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full bg-white shadow-md z-50 transition-all duration-300 py-2">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-primary">
+                MAX<span class="text-accent">.</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link text-primary hover:text-accent font-medium active">Home</a>
+                <a href="process.html" class="nav-link text-primary hover:text-accent font-medium">Process</a>
+                <a href="about.html" class="nav-link text-primary hover:text-accent font-medium">About MAX</a>
+                <a href="valuation.html" class="nav-link text-primary hover:text-accent font-medium">Valuation &amp; Strategy</a>
+                <a href="contact.html" class="nav-link text-primary hover:text-accent font-medium">Contact</a>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden text-primary focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+                <a href="index.html" class="text-primary hover:text-accent font-medium py-2">Home</a>
+                <a href="process.html" class="text-primary hover:text-accent font-medium py-2">Process</a>
+                <a href="about.html" class="text-primary hover:text-accent font-medium py-2">About MAX</a>
+                <a href="valuation.html" class="text-primary hover:text-accent font-medium py-2">Valuation &amp; Strategy</a>
+                <a href="contact.html" class="text-primary hover:text-accent font-medium py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 md:pt-32 pb-16 md:pb-24 gradient-bg">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 text-white mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+                    Sell your business with certainty
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-light opacity-90">
+                    The premium business sales team for companies valued at $5M and above.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="contact.html" class="cta-button bg-accent hover:bg-secondary text-white font-semibold py-3 px-8 rounded-md text-center">
+                        Book a Discovery Call
+                    </a>
+                    <a href="process.html" class="cta-button bg-transparent border-2 border-white text-white font-semibold py-3 px-8 rounded-md text-center hover:bg-white hover:text-primary">
+                        Learn Our Process
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <svg class="w-full max-w-lg" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#E7F2F8;stop-opacity:0.9"></stop>
+                                <stop offset="100%" style="stop-color:#E7F2F8;stop-opacity:0.6"></stop>
+                            </linearGradient>
+                        </defs>
+                        <rect x="50" y="50" width="400" height="300" rx="20" fill="url(#grad1)"></rect>
+                        <path d="M150,150 L350,150 L350,250 L150,250 Z" fill="#008891" opacity="0.7"></path>
+                        <circle cx="250" cy="200" r="50" fill="#00587A" opacity="0.8"></circle>
+                        <path d="M100,100 L400,100 L400,300 L100,300 Z" stroke="#fff" stroke-width="4" fill="none"></path>
+                        <path d="M150,200 L350,200" stroke="#fff" stroke-width="4" stroke-dasharray="10,10"></path>
+                        <path d="M250,150 L250,250" stroke="#fff" stroke-width="4" stroke-dasharray="10,10"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Differentiators Section -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary">Why Choose MAX</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-accent text-4xl mb-4">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-primary">Premium Focus</h3>
+                    <p class="text-gray-700">
+                        Specifically tailored for businesses valued at $5M and above, with strategies designed for premium market positioning.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-accent text-4xl mb-4">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-primary">Structured Process</h3>
+                    <p class="text-gray-700">
+                        A clear, milestone-driven sales approach that eliminates uncertainty and maximizes your business value.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-accent text-4xl mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-primary">Expert Team</h3>
+                    <p class="text-gray-700">
+                        Access to valuation, legal, and transaction specialists without unnecessary consultancy upsells.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Preview Section -->
+    <!-- <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4 text-primary">Our Sale Process</h2>
+            <p class="text-center text-gray-700 mb-8 max-w-3xl mx-auto">
+                A structured approach designed to maximize value and minimize disruption to your business operations.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="process-step bg-light p-6 rounded-lg shadow-md">
+                    <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold mb-4">1</div>
+                    <h3 class="text-xl font-semibold mb-3 text-primary">Discovery &amp; Valuation</h3>
+                </div>
+                
+                <div class="process-step bg-light p-6 rounded-lg shadow-md">
+                    <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold mb-4">2</div>
+                    <h3 class="text-xl font-semibold mb-3 text-primary">Preparation &amp; Marketing</h3>
+                </div>
+                
+                <div class="process-step bg-light p-6 rounded-lg shadow-md">
+                    <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold mb-4">3</div>
+                    <h3 class="text-xl font-semibold mb-3 text-primary">Negotiation &amp; Due Diligence</h3>
+                </div>
+                
+                <div class="process-step bg-light p-6 rounded-lg shadow-md">
+                    <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold mb-4">4</div>
+                    <h3 class="text-xl font-semibold mb-3 text-primary">Closing &amp; Transition</h3>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="process.html" class="cta-button inline-block bg-primary hover:bg-secondary text-white font-semibold py-3 px-8 rounded-md">
+                    View Full Process Details
+                </a>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- About Preview Section -->
+    <section class="py-16 gradient-bg text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h2 class="text-3xl font-bold mb-6">About MAX</h2>
+                    <p class="mb-4">
+                        MAX is the premium offering from Xcllusive Business Sales, positioned between traditional business brokers and large M&amp;A consultancy firms.
+                    </p>
+                    <p class="mb-6">
+                        We deliver a structured, expert-led sales model without unnecessary advisory upsells, tailored specifically for medium-to-large business owners.
+                    </p>
+                    <a href="about.html" class="cta-button inline-block bg-accent hover:bg-secondary text-white font-semibold py-3 px-8 rounded-md">
+                        Meet Our Team
+                    </a>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <svg class="w-full max-w-md" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="50" y="50" width="300" height="200" rx="10" fill="#E7F2F8" opacity="0.9"></rect>
+                        <circle cx="200" cy="150" r="80" fill="#008891" opacity="0.7"></circle>
+                        <path d="M120,150 C120,106.86 154.86,72 198,72 C241.14,72 276,106.86 276,150" stroke="#00587A" stroke-width="8" fill="none"></path>
+                        <path d="M120,150 C120,193.14 154.86,228 198,228 C241.14,228 276,193.14 276,150" stroke="#0F3057" stroke-width="8" fill="none"></path>
+                        <text x="200" y="155" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#fff">MAX</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Valuation Preview Section -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4 text-primary">Valuation &amp; Strategy</h2>
+            <p class="text-center text-gray-700 mb-12 max-w-3xl mx-auto">
+                Our discovery call is a high-value, confidential strategy session designed to provide immediate clarity and direction.
+            </p>
+            
+            <div class="bg-primary text-white p-8 rounded-lg shadow-md">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-2/3 mb-6 md:mb-0 md:pr-8">
+                        <h3 class="text-2xl font-semibold mb-4">Ready to understand your business's true value?</h3>
+                        <p class="mb-4">
+                            Learn more about our valuation approach and how we can help you maximize your business sale.
+                        </p>
+                    </div>
+                    <div class="md:w-1/3 flex justify-center">
+                        <a href="valuation.html" class="cta-button bg-accent hover:bg-secondary text-white font-semibold py-3 px-8 rounded-md text-center w-full">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary">Client Success Stories</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-light p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-accent">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="italic mb-4 text-gray-700">
+                        "MAX provided clarity and direction when I was unsure about selling my manufacturing business. Their valuation was spot on, and they found the perfect buyer within 6 months."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold mr-4">JD</div>
+                        <div>
+                            <h4 class="font-semibold">John D.</h4>
+                            <p class="text-sm text-gray-600">Manufacturing, $8.5M Sale</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-light p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-accent">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="italic mb-4 text-gray-700">
+                        "The structured approach MAX took to selling my technology services firm made all the difference. Their team managed the entire process professionally and achieved a premium price."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold mr-4">RL</div>
+                        <div>
+                            <h4 class="font-semibold">Rebecca L.</h4>
+                            <p class="text-sm text-gray-600">Tech Services, $12M Sale</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-light p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-accent">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="italic mb-4 text-gray-700">
+                        "After 15 years building my healthcare business, I wanted a sale that reflected its true value. MAX delivered beyond expectations, finding strategic buyers I wouldn't have accessed otherwise."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold mr-4">MT</div>
+                        <div>
+                            <h4 class="font-semibold">Michael T.</h4>
+                            <p class="text-sm text-gray-600">Healthcare, $15.5M Sale</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 gradient-bg text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to take the next step?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">
+                Schedule your confidential discovery call to discuss your business sale options.
+            </p>
+            <a href="contact.html" class="cta-button inline-block bg-accent hover:bg-secondary text-white font-semibold py-3 px-8 rounded-md">
+                Contact Us Today
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-4">MAX<span class="text-accent">.</span></h3>
+                    <p class="max-w-xs">
+                        Premium business sales for companies valued at $5M and above. A division of Xcllusive Business Sales.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="font-semibold mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="index.html" class="hover:text-accent">Home</a></li>
+                            <li><a href="process.html" class="hover:text-accent">Process</a></li>
+                            <li><a href="about.html" class="hover:text-accent">About MAX</a></li>
+                            <li><a href="valuation.html" class="hover:text-accent">Valuation &amp; Strategy</a></li>
+                            <li><a href="contact.html" class="hover:text-accent">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-semibold mb-4">Contact</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                <span>Sydney, Australia</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-phone-alt mr-2"></i>
+                                <span>+61 (0) 2 9817 3331</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-envelope mr-2"></i>
+                                <span>enquiries@maxbusinesssales.com.au</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-semibold mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="hover:text-accent">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="hover:text-accent">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                            <a href="#" class="hover:text-accent">
+                                <i class="fab fa-facebook text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white border-opacity-20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p>© 2025 MAX Business Sales. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-accent">Privacy Policy</a>
+                    <a href="#" class="hover:text-accent">Terms off Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Process Page -->
+    <div id="process-page" class="hidden">
+        <!-- Process page content will be here -->
+    </div>
+
+    <!-- About Page -->
+    <div id="about-page" class="hidden">
+        <!-- About page content will be here -->
+    </div>
+
+    <!-- Valuation Page -->
+    <div id="valuation-page" class="hidden">
+        <!-- Valuation page content will be here -->
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact-page" class="hidden">
+        <!-- Contact page content will be here -->
+    </div>
+
+    <!-- Thank You Page -->
+    <div id="thank-you-page" class="hidden">
+        <!-- Thank you page content will be here -->
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('py-2');
+                navbar.classList.remove('py-3');
+            } else {
+                navbar.classList.add('py-3');
+                navbar.classList.remove('py-2');
+            }
+        });
+        
+        // Set active nav link based on current page
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                const linkPage = link.getAttribute('href');
+                if (currentPage === linkPage || (currentPage === '' && linkPage === 'index.html')) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93f7fccd8212e6bd',t:'MTc0NzIwMDQ1OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: medium; visibility: hidden;"></iframe>
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/additional-methods.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.min.js"></script>            -->
+</body>
+</html>
+                  
+  </body>

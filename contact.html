@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | MAX Premium Business Sales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F3057',
+                        secondary: '#00587A',
+                        accent: '#008891',
+                        light: '#E7F2F8',
+                        dark: '#1A1A1A',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #0F3057 0%, #00587A 100%); }
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #008891;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+        .active::after { width: 100%; }
+        .cta-button { transition: all 0.3s ease; }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+        }
+        .call-now-button { display: none; }
+        @media (max-width: 768px) {
+            .call-now-button {
+                display: flex;
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                z-index: 50;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-dark">
+    <!-- Mobile Call Now Button -->
+    <a href="tel:+61000000000" class="call-now-button bg-accent hover:bg-secondary text-white font-semibold rounded-full p-4 shadow-lg flex items-center justify-center">
+        <i class="fas fa-phone-alt mr-2"></i>
+        <span>Call Now</span>
+    </a>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full bg-white shadow-md z-50 transition-all duration-300 py-3">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-primary">
+                MAX<span class="text-accent">.</span>
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link text-primary hover:text-accent font-medium">Home</a>
+                <a href="process.html" class="nav-link text-primary hover:text-accent font-medium">Process</a>
+                <a href="about.html" class="nav-link text-primary hover:text-accent font-medium">About MAX</a>
+                <a href="valuation.html" class="nav-link text-primary hover:text-accent font-medium">Valuation &amp; Strategy</a>
+                <a href="contact.html" class="nav-link text-primary hover:text-accent font-medium active">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-primary focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+                <a href="index.html" class="text-primary hover:text-accent font-medium py-2">Home</a>
+                <a href="process.html" class="text-primary hover:text-accent font-medium py-2">Process</a>
+                <a href="about.html" class="text-primary hover:text-accent font-medium py-2">About MAX</a>
+                <a href="valuation.html" class="text-primary hover:text-accent font-medium py-2">Valuation &amp; Strategy</a>
+                <a href="contact.html" class="text-primary hover:text-accent font-medium py-2 active">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-24 md:pt-32 pb-16 gradient-bg">
+        <div class="container mx-auto px-4 text-center text-white">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Contact MAX</h1>
+            <p class="text-xl max-w-3xl mx-auto">
+                Schedule your confidential discovery call or request a callback.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Form & Calendar Booking -->
+    <!-- Contact Form & Calendar Booking -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Contact Form -->
+            <div>
+                <form id="contact-form" class="bg-light p-8 rounded-lg shadow-md space-y-6">
+                    <h2 class="text-2xl font-bold text-primary mb-4">Quick Enquiry</h2>
+                    <!-- ...your fields here... -->
+                    <div>
+                        <label for="name" class="block text-primary font-semibold mb-2">Full Name*</label>
+                        <input type="text" id="name" name="name" required class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-accent" />
+                    </div>
+                    <div>
+                        <label for="email" class="block text-primary font-semibold mb-2">Email*</label>
+                        <input type="email" id="email" name="email" required class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-accent" />
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-primary font-semibold mb-2">Phone*</label>
+                        <input type="tel" id="phone" name="phone" required class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-accent" />
+                    </div>
+                    <div>
+                        <label for="business" class="block text-primary font-semibold mb-2">Business Type</label>
+                        <input type="text" id="business" name="business" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-accent" />
+                    </div>
+                    <div>
+                        <label for="message" class="block text-primary font-semibold mb-2">Message (Optional)</label>
+                        <textarea id="message" name="message" rows="4" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-accent"></textarea>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" id="confidentiality" name="confidentiality" class="mr-2" required>
+                        <label for="confidentiality" class="text-primary">I understand all information will be kept strictly confidential</label>
+                    </div>
+                    <button type="submit" class="cta-button w-full bg-accent hover:bg-secondary text-white font-semibold py-3 px-8 rounded-md">
+                        Submit Request
+                    </button>
+                </form>
+                <!-- Thank You Message (hidden by default) -->
+                <div id="thankyou-message" class="hidden bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto mt-8 text-center">
+                    <div class="text-accent text-5xl mb-6">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold mb-4 text-primary">Thank You!</h2>
+                    <p class="text-xl mb-6 text-gray-700">
+                        Your request has been submitted successfully. A member of our team will contact you within 24 hours.
+                    </p>
+                    <div class="mb-8 p-6 bg-light rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4 text-primary">Want to speak with us sooner?</h3>
+                        <p class="mb-4 text-gray-700">
+                            You can still book your discovery call directly using our calendar.
+                        </p>
+                        <a href="#book-call" class="cta-button inline-block bg-accent hover:bg-secondary text-white font-semibold py-3 px-8 rounded-md">
+                            Book Your Call Now
+                        </a>
+                    </div>
+                    <a href="index.html" class="text-primary hover:text-accent font-medium">
+                        <i class="fas fa-arrow-left mr-2"></i> Return to Homepage
+                    </a>
+                </div>
+            </div>
+            <!-- Calendar Booking Widget -->
+            <div>
+                <h2 class="text-2xl font-bold text-primary mb-4 text-center md:text-left">Book a Discovery Call</h2>
+                <p class="text-gray-700 mb-4 text-center md:text-left">
+                    Instantly schedule a confidential call with our team.
+                </p>
+                <div class="rounded-lg overflow-hidden mb-8" style="min-height: 500px;">
+                    <div class="calendly-inline-widget" data-url="https://calendly.com/mirnumaan06?hide_landing_page_details=1&amp;hide_gdpr_banner=1" style="min-width:320px;height:500px;"></div>
+                </div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-4">MAX<span class="text-accent">.</span></h3>
+                    <p class="max-w-xs">
+                        Premium business sales for companies valued at $5M and above. A division of Xcllusive Business Sales.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="font-semibold mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="index.html" class="hover:text-accent">Home</a></li>
+                            <li><a href="process.html" class="hover:text-accent">Process</a></li>
+                            <li><a href="about.html" class="hover:text-accent">About MAX</a></li>
+                            <li><a href="valuation.html" class="hover:text-accent">Valuation &amp; Strategy</a></li>
+                            <li><a href="contact.html" class="hover:text-accent">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-4">Contact</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                <span>Sydney, Australia</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-phone-alt mr-2"></i>
+                                <span>+61 (0) 2 9817 3331</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-envelope mr-2"></i>
+                                <span>enquiries@maxbusinesssales.com.au</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="hover:text-accent">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                            <a href="#" class="hover:text-accent">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                            <a href="#" class="hover:text-accent">
+                                <i class="fab fa-facebook text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white border-opacity-20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p>© 2025 MAX Business Sales. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-accent">Privacy Policy</a>
+                    <a href="#" class="hover:text-accent">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        if (navbar) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('py-2');
+                    navbar.classList.remove('py-3');
+                } else {
+                    navbar.classList.add('py-3');
+                    navbar.classList.remove('py-2');
+                }
+            });
+        }
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        window.location.href = 'thankyou.html';
+    });
+    </script>
+</body>
+</html>

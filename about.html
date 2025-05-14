@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About MAX | Premium Business Sales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F3057',
+                        secondary: '#00587A',
+                        accent: '#008891',
+                        light: '#E7F2F8',
+                        dark: '#1A1A1A',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #0F3057 0%, #00587A 100%);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #008891;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .active::after {
+            width: 100%;
+        }
+        .team-member {
+            transition: all 0.3s ease;
+        }
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        /* Mobile call button */
+        .call-now-button {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .call-now-button {
+                display: flex;
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                z-index: 50;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Mobile Call Now Button -->
+    <a href="tel:+61000000000" class="call-now-button bg-accent hover:bg-secondary text-white font-semibold rounded-full p-4 shadow-lg flex items-center justify-center">
+        <i class="fas fa-phone-alt mr-2"></i>
+        <span>Call Now</span>
+    </a>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full bg-white shadow-md z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-primary">
+                MAX<span class="text-accent">.</span>
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link text-primary hover:text-accent font-medium active">Home</a>
+                <a href="process.html" class="nav-link text-primary hover:text-accent font-medium">Process</a>
+                <a href="about.html" class="nav-link text-primary hover:text-accent font-medium">About MAX</a>
+                <a href="valuation.html" class="nav-link text-primary hover:text-accent font-medium">Valuation &amp; Strategy</a>
+                <a href="contact.html" class="nav-link text-primary hover:text-accent font-medium">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-primary focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+                <a href="index.html" class="text-primary hover:text-accent font-medium py-2">Home</a>
+                <a href="process.html" class="text-primary hover:text-accent font-medium py-2">Process</a>
+                <a href="about.html" class="text-primary hover:text-accent font-medium py-2">About MAX</a>
+                <a href="valuation.html" class="text-primary hover:text-accent font-medium py-2">Valuation &amp; Strategy</a>
+                <a href="contact.html" class="text-primary hover:text-accent font-medium py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-24 md:pt-32 pb-16 gradient-bg">
+        <div class="container mx-auto px-4 text-center text-white">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">About MAX</h1>
+            <p class="text-xl max-w-3xl mx-auto">
+                The premium business sales team dedicated to companies valued at $5M and above.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold mb-8 text-primary">Our Story</h2>
+                <div class="flex flex-col md:flex-row items-center mb-12">
+                    <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                        <p class="text-gray-700 mb-4">
+                            MAX was established as the premium division of Xcllusive Business Sales to address a specific gap in the market: high-quality, structured business sale services for companies valued between $5M and $50M.
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            We recognized that business owners in this segment were often caught between traditional business brokers who lacked the expertise for complex transactions and large M&amp;A consultancy firms whose fee structures and approach were better suited to much larger enterprises.
+                        </p>
+                        <p class="text-gray-700">
+                            Our founding team combined decades of experience in business sales, valuation, and transaction management to create a service model specifically tailored to the needs of premium business owners.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <svg class="w-full max-w-md mx-auto" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="50" y="50" width="300" height="200" rx="10" fill="#E7F2F8" opacity="0.9"></rect>
+                            <circle cx="200" cy="150" r="80" fill="#008891" opacity="0.7"></circle>
+                            <path d="M120,150 C120,106.86 154.86,72 198,72 C241.14,72 276,106.86 276,150" stroke="#00587A" stroke-width="8" fill="none"></path>
+                            <path d="M120,150 C120,193.14 154.86,228 198,228 C241.14,228 276,193.14 276,150" stroke="#0F3057" stroke-width="8" fill="none"></path>
+                            <text x="200" y="155" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#fff">MAX</text>
+                        </svg>
+                    </div>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Our Positioning</h3>
+                <p class="text-gray-700 mb-6">
+                    MAX occupies a unique position in the business sales market:
+                </p>
+                <div class="bg-light p-6 rounded-lg mb-8">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/3 mb-4 md:mb-0 md:pr-6 md:border-r border-gray-300">
+                            <h4 class="font-semibold mb-2 text-primary">Traditional Brokers</h4>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Limited resources</li>
+                                <li>• Generalist approach</li>
+                                <li>• Transaction focus</li>
+                                <li>• Limited buyer networks</li>
+                            </ul>
+                        </div>
+                        <div class="md:w-1/3 mb-4 md:mb-0 md:px-6 md:border-r border-gray-300">
+                            <h4 class="font-semibold mb-2 text-accent">MAX</h4>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Specialist team</li>
+                                <li>• Structured process</li>
+                                <li>• Premium focus</li>
+                                <li>• Strategic approach</li>
+                                <li>• Extensive networks</li>
+                            </ul>
+                        </div>
+                        <div class="md:w-1/3 md:pl-6">
+                            <h4 class="font-semibold mb-2 text-primary">M&amp;A Consultancies</h4>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• High overhead costs</li>
+                                <li>• Focus on $50M+</li>
+                                <li>• Extensive restructuring</li>
+                                <li>• Complex fee structures</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-700">
+                    This positioning allows us to deliver the expertise and quality of large consultancy firms with the personalized service and reasonable fee structure that medium-to-large business owners expect.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary">Our Values</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="text-accent text-4xl mb-4">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-primary">Integrity</h3>
+                    <p class="text-gray-700">
+                        We believe in complete transparency with our clients, providing honest assessments and realistic expectations throughout the sale process.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="text-accent text-4xl mb-4">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-primary">Excellence</h3>
+                    <p class="text-gray-700">
+                        We are committed to delivering exceptional quality in every aspect of our service, from valuation to marketing to transaction management.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="text-accent text-4xl mb-4">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-primary">Confidentiality</h3>
+                    <p class="text-gray-700">
+                        We understand the sensitivity of business sales and maintain strict confidentiality protocols to protect our clients' interests.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="text-accent text-4xl mb-4">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-primary">Innovation</h3>
+                    <p class="text-gray-700">
+                        We continuously refine our processes and strategies to adapt to changing market conditions and deliver optimal outcomes for our clients.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="text-accent text-4xl mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-primary">Collaboration</h3>
+                    <p class="text-gray-700">
+                        We work closely with our clients and their advisors, leveraging collective expertise to achieve the best possible outcome.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="text-accent text-4xl mb-4">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-primary">Results-Focused</h3>
+                    <p class="text-gray-700">
+                        We measure our success by the outcomes we achieve for our clients, not just in terms of sale price but also deal structure and post-sale satisfaction.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary">Our Expert Team</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="team-member bg-light p-6 rounded-lg shadow-md">
+                    <div class="w-32 h-32 rounded-full bg-primary mx-auto mb-6 flex items-center justify-center">
+                        <i class="fas fa-user text-5xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-2 text-primary">Michael Thompson</h3>
+                    <p class="text-center text-accent mb-4">Managing Director</p>
+                    <p class="text-gray-700 mb-4 text-center">
+                        20+ years experience in M&amp;A transactions and business strategy for mid-market companies.
+                    </p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-primary hover:text-accent">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-primary hover:text-accent">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="team-member bg-light p-6 rounded-lg shadow-md">
+                    <div class="w-32 h-32 rounded-full bg-primary mx-auto mb-6 flex items-center justify-center">
+                        <i class="fas fa-user text-5xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-2 text-primary">Sarah Chen</h3>
+                    <p class="text-center text-accent mb-4">Valuation Specialist</p>
+                    <p class="text-gray-700 mb-4 text-center">
+                        Former Big 4 valuation expert with deep industry knowledge across multiple sectors.
+                    </p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-primary hover:text-accent">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-primary hover:text-accent">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="team-member bg-light p-6 rounded-lg shadow-md">
+                    <div class="w-32 h-32 rounded-full bg-primary mx-auto mb-6 flex items-center justify-center">
+                        <i class="fas fa-user text-5xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-2 text-primary">David Patel</h3>
+                    <p class="text-center text-accent mb-4">Transaction Director</p>
+                    <p class="text-gray-700 mb-4 text-center">
+                        Specialized in complex deal structures and negotiations for businesses $5M-$50M.
+                    </p>
+                    <div class="flex justify-center space-x-3">
+                        <!-- Social icons can be added here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
