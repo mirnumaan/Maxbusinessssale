@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,88 +26,35 @@
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, #0F3057 0%, #00587A 100%);
-        }
-        
-        .section-transition {
-            position: relative;
-            height: 100px;
-            overflow: hidden;
-        }
-        
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #0F3057 0%, #00587A 100%); }
+        .section-transition { position: relative; height: 100px; overflow: hidden; }
         .section-transition::after {
             content: "";
             position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            bottom: 0; left: 0; width: 100%; height: 100%;
             background: linear-gradient(to bottom right, transparent 49.5%, white 50%);
         }
-        
-        .nav-link {
-            position: relative;
-        }
-        
+        .nav-link { position: relative; }
         .nav-link::after {
             content: '';
             position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
+            width: 0; height: 2px; bottom: -4px; left: 0;
             background-color: #008891;
             transition: width 0.3s ease;
         }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        .active::after {
-            width: 100%;
-        }
-        
-        .process-step {
-            transition: all 0.3s ease;
-        }
-        
-        .process-step:hover {
-            transform: translateY(-5px);
-        }
-        
-        .testimonial-card {
-            transition: all 0.3s ease;
-        }
-        
-        .testimonial-card:hover {
-            transform: scale(1.02);
-        }
-        
-        .cta-button {
-            transition: all 0.3s ease;
-        }
-        
+        .nav-link:hover::after, .active::after { width: 100%; }
+        .process-step { transition: all 0.3s ease; }
+        .process-step:hover { transform: translateY(-5px); }
+        .testimonial-card { transition: all 0.3s ease; }
+        .testimonial-card:hover { transform: scale(1.02); }
+        .cta-button { transition: all 0.3s ease; }
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
         }
-        
-        /* Mobile call button */
-        .call-now-button {
-            display: none;
-        }
-        
+        .call-now-button { display: none; }
         @media (max-width: 768px) {
             .call-now-button {
                 display: flex;
@@ -129,26 +75,25 @@
 
     <!-- Navigation -->
     <nav id="navbar" class="fixed w-full bg-white shadow-md z-50 transition-all duration-300 py-2">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-primary">
-                MAX<span class="text-accent">.</span>
+        <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+            <a href="index.html" class="flex items-center md:justify-start justify-center flex-1">
+                <span>
+                    <img src="logo.png" alt="MAX Logo" class="h-10 w-14 sm:h-12 sm:w-20 md:h-14 md:w-24 object-contain transition-all duration-300" />
+                </span>
             </a>
-            
             <div class="hidden md:flex space-x-8">
                 <a href="index.html" class="nav-link text-primary hover:text-accent font-medium active">Home</a>
-                <a href="process.html" class="nav-link text-primary hover:text-accent font-medium">Process</a>
-                <a href="about.html" class="nav-link text-primary hover:text-accent font-medium">About MAX</a>
-                <a href="valuation.html" class="nav-link text-primary hover:text-accent font-medium">Valuation &amp; Strategy</a>
-                <a href="contact.html" class="nav-link text-primary hover:text-accent font-medium">Contact</a>
+                <a href="process.html" class="nav-link text-primary hover:text-accent font-medium active">Process</a>
+                <a href="about.html" class="nav-link text-primary hover:text-accent font-medium active">About MAX</a>
+                <a href="valuation.html" class="nav-link text-primary hover:text-accent font-medium active">Valuation &amp; Strategy</a>
+                <a href="contact.html" class="nav-link text-primary hover:text-accent font-medium active">Contact</a>
             </div>
-            
             <button id="mobile-menu-button" class="md:hidden text-primary focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
             </button>
         </div>
-        
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
             <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
@@ -162,6 +107,9 @@
     </nav>
 
     <!-- Hero Section -->
+    <div class="hidden md:block">
+        <div class="h-16"></div>
+    </div>
     <section id="home" class="pt-24 md:pt-32 pb-16 md:pb-24 gradient-bg">
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 text-white mb-10 md:mb-0">
@@ -237,44 +185,6 @@
         </div>
     </section>
 
-    <!-- Process Preview Section -->
-    <!-- <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-4 text-primary">Our Sale Process</h2>
-            <p class="text-center text-gray-700 mb-8 max-w-3xl mx-auto">
-                A structured approach designed to maximize value and minimize disruption to your business operations.
-            </p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <div class="process-step bg-light p-6 rounded-lg shadow-md">
-                    <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold mb-4">1</div>
-                    <h3 class="text-xl font-semibold mb-3 text-primary">Discovery &amp; Valuation</h3>
-                </div>
-                
-                <div class="process-step bg-light p-6 rounded-lg shadow-md">
-                    <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold mb-4">2</div>
-                    <h3 class="text-xl font-semibold mb-3 text-primary">Preparation &amp; Marketing</h3>
-                </div>
-                
-                <div class="process-step bg-light p-6 rounded-lg shadow-md">
-                    <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold mb-4">3</div>
-                    <h3 class="text-xl font-semibold mb-3 text-primary">Negotiation &amp; Due Diligence</h3>
-                </div>
-                
-                <div class="process-step bg-light p-6 rounded-lg shadow-md">
-                    <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold mb-4">4</div>
-                    <h3 class="text-xl font-semibold mb-3 text-primary">Closing &amp; Transition</h3>
-                </div>
-            </div>
-            
-            <div class="text-center">
-                <a href="process.html" class="cta-button inline-block bg-primary hover:bg-secondary text-white font-semibold py-3 px-8 rounded-md">
-                    View Full Process Details
-                </a>
-            </div>
-        </div>
-    </section> -->
-
     <!-- About Preview Section -->
     <section class="py-16 gradient-bg text-white">
         <div class="container mx-auto px-4">
@@ -311,7 +221,6 @@
             <p class="text-center text-gray-700 mb-12 max-w-3xl mx-auto">
                 Our discovery call is a high-value, confidential strategy session designed to provide immediate clarity and direction.
             </p>
-            
             <div class="bg-primary text-white p-8 rounded-lg shadow-md">
                 <div class="flex flex-col md:flex-row items-center">
                     <div class="md:w-2/3 mb-6 md:mb-0 md:pr-8">
@@ -334,7 +243,6 @@
     <section class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12 text-primary">Client Success Stories</h2>
-            
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="testimonial-card bg-light p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
@@ -357,7 +265,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="testimonial-card bg-light p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
                         <div class="text-accent">
@@ -379,7 +286,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="testimonial-card bg-light p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
                         <div class="text-accent">
@@ -428,7 +334,6 @@
                         Premium business sales for companies valued at $5M and above. A division of Xcllusive Business Sales.
                     </p>
                 </div>
-                
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
                     <div>
                         <h4 class="font-semibold mb-4">Quick Links</h4>
@@ -440,7 +345,6 @@
                             <li><a href="contact.html" class="hover:text-accent">Contact</a></li>
                         </ul>
                     </div>
-                    
                     <div>
                         <h4 class="font-semibold mb-4">Contact</h4>
                         <ul class="space-y-2">
@@ -458,7 +362,6 @@
                             </li>
                         </ul>
                     </div>
-                    
                     <div>
                         <h4 class="font-semibold mb-4">Follow Us</h4>
                         <div class="flex space-x-4">
@@ -475,7 +378,6 @@
                     </div>
                 </div>
             </div>
-            
             <div class="border-t border-white border-opacity-20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
                 <p>© 2025 MAX Business Sales. All rights reserved.</p>
                 <div class="flex space-x-4 mt-4 md:mt-0">
@@ -485,43 +387,24 @@
             </div>
         </div>
     </footer>
-    <!-- Process Page -->
-    <div id="process-page" class="hidden">
-        <!-- Process page content will be here -->
-    </div>
 
-    <!-- About Page -->
-    <div id="about-page" class="hidden">
-        <!-- About page content will be here -->
-    </div>
-
-    <!-- Valuation Page -->
-    <div id="valuation-page" class="hidden">
-        <!-- Valuation page content will be here -->
-    </div>
-
-    <!-- Contact Page -->
-    <div id="contact-page" class="hidden">
-        <!-- Contact page content will be here -->
-    </div>
-
-    <!-- Thank You Page -->
-    <div id="thank-you-page" class="hidden">
-        <!-- Thank you page content will be here -->
-    </div>
+    <!-- Placeholder Pages -->
+    <div id="process-page" class="hidden"></div>
+    <div id="about-page" class="hidden"></div>
+    <div id="valuation-page" class="hidden"></div>
+    <div id="contact-page" class="hidden"></div>
+    <div id="thank-you-page" class="hidden"></div>
 
     <script>
         // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
-        
+
         // Navbar scroll effect
         const navbar = document.getElementById('navbar');
-        
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
                 navbar.classList.add('py-2');
@@ -531,12 +414,11 @@
                 navbar.classList.remove('py-2');
             }
         });
-        
+
         // Set active nav link based on current page
         document.addEventListener('DOMContentLoaded', () => {
             const currentPage = window.location.pathname.split('/').pop();
             const navLinks = document.querySelectorAll('.nav-link');
-            
             navLinks.forEach(link => {
                 link.classList.remove('active');
                 const linkPage = link.getAttribute('href');
@@ -546,15 +428,5 @@
             });
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93f7fccd8212e6bd',t:'MTc0NzIwMDQ1OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: medium; visibility: hidden;"></iframe>
-    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/additional-methods.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.min.js"></script>            -->
 </body>
 </html>
-                  
-  </body>

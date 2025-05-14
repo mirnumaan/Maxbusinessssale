@@ -92,16 +92,19 @@
     <!-- Navigation -->
     <nav id="navbar" class="fixed w-full bg-white shadow-md z-50 transition-all duration-300">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-2 text-2xl font-bold text-primary">
-                <img src="logo.png" alt="MAX Logo" class="h-8 w-8 md:h-10 md:w-10 object-contain" />
-                <span>MAX<span class="text-accent">.</span></span>
+            <a href="index.html" class="flex items-center md:justify-start justify-center space-x-2 text-1xl font-bold text-primary flex-1">
+                <span>
+                    <img src="logo.png"
+                        alt="MAX Logo"
+                        class="h-10 w-12 sm:h-14 sm:w-16 md:h-20 md:w-24 object-contain transition-all duration-300" />
+                </span>
             </a>
             <div class="hidden md:flex space-x-8">
                 <a href="index.html" class="nav-link text-primary hover:text-accent font-medium active">Home</a>
-                <a href="process.html" class="nav-link text-primary hover:text-accent font-medium">Process</a>
-                <a href="about.html" class="nav-link text-primary hover:text-accent font-medium">About MAX</a>
-                <a href="valuation.html" class="nav-link text-primary hover:text-accent font-medium">Valuation &amp; Strategy</a>
-                <a href="contact.html" class="nav-link text-primary hover:text-accent font-medium">Contact</a>
+                <a href="process.html" class="nav-link text-primary hover:text-accent font-medium active">Process</a>
+                <a href="about.html" class="nav-link text-primary hover:text-accent font-medium active">About MAX</a>
+                <a href="valuation.html" class="nav-link text-primary hover:text-accent font-medium active">Valuation &amp; Strategy</a>
+                <a href="contact.html" class="nav-link text-primary hover:text-accent font-medium active">Contact</a>
             </div>
             <button id="mobile-menu-button" class="md:hidden text-primary focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -147,14 +150,8 @@
                             Our founding team combined decades of experience in business sales, valuation, and transaction management to create a service model specifically tailored to the needs of premium business owners.
                         </p>
                     </div>
-                    <div class="md:w-1/2">
-                        <svg class="w-full max-w-md mx-auto" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="50" y="50" width="300" height="200" rx="10" fill="#E7F2F8" opacity="0.9"></rect>
-                            <circle cx="200" cy="150" r="80" fill="#008891" opacity="0.7"></circle>
-                            <path d="M120,150 C120,106.86 154.86,72 198,72 C241.14,72 276,106.86 276,150" stroke="#00587A" stroke-width="8" fill="none"></path>
-                            <path d="M120,150 C120,193.14 154.86,228 198,228 C241.14,228 276,193.14 276,150" stroke="#0F3057" stroke-width="8" fill="none"></path>
-                            <text x="200" y="155" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#fff">MAX</text>
-                        </svg>
+                    <div class="md:w-1/2 flex justify-center">
+                        <img src="logo.png" alt="MAX Logo" class="w-full max-w-md mx-auto h-auto object-contain" />
                     </div>
                 </div>
                 <h3 class="text-2xl font-semibold mb-4 text-primary">Our Positioning</h3>
