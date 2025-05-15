@@ -26,23 +26,10 @@
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, #0F3057 0%, #00587A 100%);
-        }
-        
-        .nav-link {
-            position: relative;
-        }
-        
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #0F3057 0%, #00587A 100%); }
+        .nav-link { position: relative; }
         .nav-link::after {
             content: '';
             position: absolute;
@@ -53,44 +40,22 @@
             background-color: #008891;
             transition: width 0.3s ease;
         }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        .active::after {
-            width: 100%;
-        }
-        
-        .process-step {
-            transition: all 0.3s ease;
-        }
-        
-        .process-step:hover {
-            transform: translateY(-5px);
-        }
-        
-        .cta-button {
-            transition: all 0.3s ease;
-        }
-        
+        .nav-link:hover::after { width: 100%; }
+        .active::after { width: 100%; }
+        .process-step { transition: all 0.3s ease; }
+        .process-step:hover { transform: translateY(-5px); }
+        .cta-button { transition: all 0.3s ease; }
         .cta-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
-        
-        /* Mobile call button */
-        .call-now-button {
-            display: none;
-        }
-        
+        .call-now-button { display: none; }
         @media (max-width: 768px) {
-            .call-now-button {
-                display: flex;
-                position: fixed;
-                bottom: 20px;
-                right: 20px;
-                z-index: 50;
+            .nav-link::after,
+            .nav-link:hover::after,
+            .active::after {
+                width: 0 !important;
+                transition: none !important;
             }
         }
     </style>
@@ -109,7 +74,6 @@
             <a href="index.html" class="text-2xl font-bold text-primary">
                 MAX<span class="text-accent">.</span>
             </a>
-            
             <div class="hidden md:flex space-x-8">
                 <a href="index.html" class="nav-link text-primary hover:text-accent font-medium active">Home</a>
                 <a href="process.html" class="nav-link text-primary hover:text-accent font-medium">Process</a>
@@ -117,14 +81,12 @@
                 <a href="valuation.html" class="nav-link text-primary hover:text-accent font-medium">Valuation &amp; Strategy</a>
                 <a href="contact.html" class="nav-link text-primary hover:text-accent font-medium">Contact</a>
             </div>
-            
             <button id="mobile-menu-button" class="md:hidden text-primary focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
             </button>
         </div>
-        
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
             <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
@@ -154,7 +116,6 @@
                 <p class="text-lg text-gray-700 mb-12">
                     At MAX, we've developed a comprehensive process that guides business owners through every stage of selling their business. Our structured approach ensures clarity, minimizes uncertainty, and is designed to achieve the best possible outcome for your business sale.
                 </p>
-                
                 <div class="space-y-16">
                     <!-- Step 1 -->
                     <div class="flex flex-col md:flex-row">
@@ -189,7 +150,6 @@
                             </p>
                         </div>
                     </div>
-                    
                     <!-- Step 2 -->
                     <div class="flex flex-col md:flex-row">
                         <div class="md:w-1/3 mb-6 md:mb-0">
@@ -227,7 +187,6 @@
                             </p>
                         </div>
                     </div>
-                    
                     <!-- Step 3 -->
                     <div class="flex flex-col md:flex-row">
                         <div class="md:w-1/3 mb-6 md:mb-0">
@@ -265,7 +224,6 @@
                             </p>
                         </div>
                     </div>
-                    
                     <!-- Step 4 -->
                     <div class="flex flex-col md:flex-row">
                         <div class="md:w-1/3 mb-6 md:mb-0">
@@ -312,11 +270,9 @@
     <section class="py-16 bg-light">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12 text-primary">Typical Timeline</h2>
-            
             <div class="max-w-4xl mx-auto relative">
                 <!-- Timeline Line -->
                 <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary"></div>
-                
                 <!-- Timeline Items -->
                 <div class="space-y-12">
                     <!-- Month 1 -->
@@ -332,7 +288,6 @@
                             </p>
                         </div>
                     </div>
-                    
                     <!-- Month 2-3 -->
                     <div class="flex flex-col md:flex-row items-center">
                         <div class="md:w-1/2 md:pr-8 md:text-right mb-4 md:mb-0">
@@ -346,7 +301,6 @@
                             </p>
                         </div>
                     </div>
-                    
                     <!-- Month 4-6 -->
                     <div class="flex flex-col md:flex-row items-center">
                         <div class="md:w-1/2 md:pr-8 md:text-right mb-4 md:mb-0">
@@ -360,7 +314,6 @@
                             </p>
                         </div>
                     </div>
-                    
                     <!-- Month 7-9 -->
                     <div class="flex flex-col md:flex-row items-center">
                         <div class="md:w-1/2 md:pr-8 md:text-right mb-4 md:mb-0">
@@ -374,7 +327,6 @@
                             </p>
                         </div>
                     </div>
-                    
                     <!-- Month 10 -->
                     <div class="flex flex-col md:flex-row items-center">
                         <div class="md:w-1/2 md:pr-8 md:text-right mb-4 md:mb-0">
@@ -389,16 +341,17 @@
                         </div>
                     </div>
                 </div>
-                
                 <p class="text-center mt-12 text-gray-700">
                     <em>Note: Timeline is indicative and may vary based on business complexity and market conditions.</em>
                 </p>
             </div>
         </div>
-        <section class="py-16 bg-white">
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12 text-primary">Frequently Asked Questions</h2>
-            
             <div class="max-w-3xl mx-auto space-y-6">
                 <div class="bg-light p-6 rounded-lg">
                     <h3 class="text-xl font-semibold mb-3 text-primary">How long does the entire sale process typically take?</h3>
@@ -406,28 +359,24 @@
                         For businesses valued at $5M and above, the process typically takes 8-12 months from initial engagement to closing. Complex businesses or challenging market conditions may extend this timeline.
                     </p>
                 </div>
-                
                 <div class="bg-light p-6 rounded-lg">
                     <h3 class="text-xl font-semibold mb-3 text-primary">How is confidentiality maintained during the sale process?</h3>
                     <p class="text-gray-700">
                         We implement strict confidentiality protocols, including blind profiles, signed NDAs before information disclosure, controlled information release, and careful management of site visits and management meetings.
                     </p>
                 </div>
-                
                 <div class="bg-light p-6 rounded-lg">
                     <h3 class="text-xl font-semibold mb-3 text-primary">When should I tell my employees about the sale?</h3>
                     <p class="text-gray-700">
                         This is a delicate decision that varies by business. Generally, we recommend limiting knowledge to key executives until later stages of the process. We'll help develop a communication strategy that minimizes disruption.
                     </p>
                 </div>
-                
                 <div class="bg-light p-6 rounded-lg">
                     <h3 class="text-xl font-semibold mb-3 text-primary">What makes MAX's process different from other business brokers?</h3>
                     <p class="text-gray-700">
                         Our process is specifically designed for premium businesses and includes more comprehensive buyer research, higher quality marketing materials, and a team-based approach with specialists in valuation, legal considerations, and transaction management.
                     </p>
                 </div>
-                
                 <div class="bg-light p-6 rounded-lg">
                     <h3 class="text-xl font-semibold mb-3 text-primary">How involved will I need to be during the sale process?</h3>
                     <p class="text-gray-700">
@@ -461,7 +410,6 @@
                         Premium business sales for companies valued at $5M and above. A division of Xcllusive Business Sales.
                     </p>
                 </div>
-                
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
                     <div>
                         <h4 class="font-semibold mb-4">Quick Links</h4>
@@ -473,7 +421,6 @@
                             <li><a href="contact.html" class="hover:text-accent">Contact</a></li>
                         </ul>
                     </div>
-                    
                     <div>
                         <h4 class="font-semibold mb-4">Contact</h4>
                         <ul class="space-y-2">
@@ -491,7 +438,6 @@
                             </li>
                         </ul>
                     </div>
-                    
                     <div>
                         <h4 class="font-semibold mb-4">Follow Us</h4>
                         <div class="flex space-x-4">
@@ -508,15 +454,23 @@
                     </div>
                 </div>
             </div>
-            
             <div class="border-t border-white border-opacity-20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
                 <p>© 2025 MAX Business Sales. All rights reserved.</p>
                 <div class="flex space-x-4 mt-4 md:mt-0">
                     <a href="#" class="hover:text-accent">Privacy Policy</a>
-    </footer>
-</body>
-</html>      </div>
+                </div>
             </div>
         </div>
     </footer>
-</section>
+    <script>
+    // Hamburger menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
