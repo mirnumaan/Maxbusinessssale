@@ -73,12 +73,20 @@
         }
         @media (max-width: 768px) {
             .call-now-button {
-                display: flex;
-                position: fixed;
-                bottom: 20px;
-                right: 20px;
-                z-index: 50;
+            display: flex;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 50;
             }
+        }
+        @media (min-width: 769px) {
+            .call-now-button {
+            display: none !important;
+            }
+        }
+        .mobile-nav-link::after {
+            display: none !important;
         }
     </style>
 </head>
@@ -92,9 +100,9 @@
     <!-- Navigation -->
     <nav id="navbar" class="fixed w-full bg-white shadow-md z-50 transition-all duration-300">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="index.html" class="flex items-center md:justify-start justify-center space-x-2 text-1xl font-bold text-primary flex-1">
+            <a href="index.html" class="flex items-center md:justify-start space-x-2 text-1xl font-bold text-primary flex-1">
                 <span>
-                    <img src="logo.png"
+                    <img src="logo1.png"
                         alt="MAX Logo"
                         class="h-10 w-12 sm:h-14 sm:w-16 md:h-20 md:w-24 object-contain transition-all duration-300" />
                 </span>
@@ -115,11 +123,11 @@
         <!-- Mobile Menu -->
        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
             <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
-                <a href="index.html" class="nav-link text-primary hover:text-accent font-medium py-2">Home</a>
-                <a href="process.html" class="nav-link text-primary hover:text-accent font-medium py-2">Process</a>
-                <a href="about.html" class="nav-link text-primary hover:text-accent font-medium py-2 active">About MAX</a>
-                <a href="valuation.html" class="nav-link text-primary hover:text-accent font-medium py-2">Valuation &amp; Strategy</a>
-                <a href="contact.html" class="nav-link text-primary hover:text-accent font-medium py-2">Contact</a>
+                <a href="index.html" class="nav-link mobile-nav-link text-primary hover:text-accent font-medium py-2">Home</a>
+                <a href="process.html" class="nav-link mobile-nav-link text-primary hover:text-accent font-medium py-2">Process</a>
+                <a href="about.html" class="nav-link mobile-nav-link text-primary hover:text-accent font-medium py-2 active">About MAX</a>
+                <a href="valuation.html" class="nav-link mobile-nav-link text-primary hover:text-accent font-medium py-2">Valuation &amp; Strategy</a>
+                <a href="contact.html" class="nav-link mobile-nav-link text-primary hover:text-accent font-medium py-2">Contact</a>
             </div>
         </div>
     </nav>
@@ -151,8 +159,9 @@
                         </p>
                     </div>
                     <div class="md:w-1/2 flex justify-center">
-                        <img src="logo.png" alt="MAX Logo" class="w-full max-w-md mx-auto h-auto object-contain" />
+                        <img src="logo1.png" alt="MAX Logo" class="w-full max-w-md mx-auto h-auto object-contain" />
                     </div>
+
                 </div>
                 <h3 class="text-2xl font-semibold mb-4 text-primary">Our Positioning</h3>
                 <p class="text-gray-700 mb-6">

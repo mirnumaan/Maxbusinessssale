@@ -47,14 +47,18 @@
             transform: translateY(-2px);
             box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
         }
-        .call-now-button { display: none; }
-        @media (max-width: 768px) {
+         @media (max-width: 768px) {
             .call-now-button {
-                display: flex;
-                position: fixed;
-                bottom: 20px;
-                right: 20px;
-                z-index: 50;
+            display: flex;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 50;
+            }
+        }
+        @media (min-width: 769px) {
+            .call-now-button {
+            display: none !important;
             }
         }
     </style>
@@ -67,17 +71,22 @@
     </a>
 
     <!-- Navigation -->
-    <nav id="navbar" class="fixed w-full bg-white shadow-md z-50 transition-all duration-300 py-3">
+    <nav id="navbar" class="fixed w-full bg-white shadow-md z-50 transition-all duration-300">
+
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-primary">
-                MAX<span class="text-accent">.</span>
+            <a href="index.html" class="flex items-center md:justify-start space-x-2 text-1xl font-bold text-primary flex-1">
+                <span>
+                    <img src="logo1.png"
+                        alt="MAX Logo"
+                        class="h-10 w-12 sm:h-14 sm:w-16 md:h-20 md:w-24 object-contain transition-all duration-300" />
+                </span>
             </a>
             <div class="hidden md:flex space-x-8">
-                <a href="index.html" class="nav-link text-primary hover:text-accent font-medium">Home</a>
+                <a href="index.html" class="nav-link text-primary hover:text-accent font-medium active">Home</a>
                 <a href="process.html" class="nav-link text-primary hover:text-accent font-medium">Process</a>
                 <a href="about.html" class="nav-link text-primary hover:text-accent font-medium">About MAX</a>
                 <a href="valuation.html" class="nav-link text-primary hover:text-accent font-medium">Valuation &amp; Strategy</a>
-                <a href="contact.html" class="nav-link text-primary hover:text-accent font-medium active">Contact</a>
+                <a href="contact.html" class="nav-link text-primary hover:text-accent font-medium">Contact</a>
             </div>
             <button id="mobile-menu-button" class="md:hidden text-primary focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -92,7 +101,7 @@
                 <a href="process.html" class="text-primary hover:text-accent font-medium py-2">Process</a>
                 <a href="about.html" class="text-primary hover:text-accent font-medium py-2">About MAX</a>
                 <a href="valuation.html" class="text-primary hover:text-accent font-medium py-2">Valuation &amp; Strategy</a>
-                <a href="contact.html" class="text-primary hover:text-accent font-medium py-2 active">Contact</a>
+                <a href="contact.html" class="text-primary hover:text-accent font-medium py-2">Contact</a>
             </div>
         </div>
     </nav>
