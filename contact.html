@@ -117,13 +117,12 @@
     </section>
 
     <!-- Contact Form & Calendar Booking -->
-    <!-- Contact Form & Calendar Booking -->
     <section class="py-16 bg-white">
         <div class="container mx-auto px-4 max-w-5xl">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
             <!-- Contact Form -->
             <div>
-                <form id="contact-form" class="bg-light p-8 rounded-lg shadow-md space-y-6">
+                <form id="contact-form" action="contact-submit.php" method="POST" class="bg-light p-8 rounded-lg shadow-md space-y-6">
                     <h2 class="text-2xl font-bold text-primary mb-4">Quick Enquiry</h2>
                     <!-- ...your fields here... -->
                     <div>
@@ -189,8 +188,8 @@
                 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
             </div>
         </div>
-    </div>
-</section>
+        </div>
+    </section>
 
 
     <!-- Footer -->
@@ -279,10 +278,25 @@
                 }
             });
         }
+        // Contact form submission
         document.getElementById('contact-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        window.location.href = 'thankyou.html';
-    });
+            e.preventDefault();
+            const form = this;
+            const formData = new FormData(form);
+        
+            fetch('contact-submit.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                form.classList.add('hidden');
+                document.getElementById('thankyou-message').classList.remove('hidden');
+            })
+            .catch(error => {
+                alert('There was an error submitting the form. Please try again.');
+            });
+        });
     </script>
 </body>
 </html>
