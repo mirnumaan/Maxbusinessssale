@@ -1,10 +1,9 @@
 <?php
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-$host = '192.250.235.185'; // use your MySQL server IP
-$db   = 'maxbusin1_forum';
-$pass = 'Ym!p7w_5ma*Xcv?^';
-$user = 'maxbusin1_phpma';
-
+$host = ''; // use your MySQL server IP
+$db   = '';
+$pass = '';
+$user = '';
 
 $conn = new mysqli($host, $user, $pass, $db);
 if ($conn->connect_error) {
