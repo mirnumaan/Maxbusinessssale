@@ -1,30 +1,28 @@
 <?php
-mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-$host = ''; // use your MySQL server IP
-$db   = '';
-$pass = '';
-$user = '';
+// Get form data safely
+$name    = isset($_POST['name']) ? htmlspecialchars($_POST['name']) : '';
+$email   = isset($_POST['email']) ? htmlspecialchars($_POST['email']) : '';
+$phone   = isset($_POST['phone']) ? htmlspecialchars($_POST['phone']) : '';
+$business= isset($_POST['business']) ? htmlspecialchars($_POST['business']) : '';
+$message = isset($_POST['message']) ? htmlspecialchars($_POST['message']) : '';
+$confidentiality = isset($_POST['confidentiality']) ? 'Agreed' : 'Not agreed';
 
-$conn = new mysqli($host, $user, $pass, $db);
-if ($conn->connect_error) {
-    die('Database connection failed: ' . $conn->connect_error);
-}
+// Your email address
+$to = "your@email.com";
 
-$name     = $_POST['name'] ?? '';
-$email    = $_POST['email'] ?? '';
-$phone    = $_POST['phone'] ?? '';
-$business = $_POST['business'] ?? '';
-$message  = $_POST['message'] ?? '';
+// Subject
+$subject = "New Contact Form Submission from $name";
 
-$stmt = $conn->prepare("INSERT INTO contacts (name, email, phone, business, message) VALUES (?, ?, ?, ?, ?)");
-$stmt->bind_param("sssss", $name, $email, $phone, $business, $message);
+// Email content
+$body = "Name: $name\nEmail: $email\nPhone: $phone\nBusiness: $business\nMessage: $message\nConfidentiality: $confidentiality";
 
-if ($stmt->execute()) {
+// Additional headers
+$headers = "From: $email";
+
+// Send email
+if (mail($to, $subject, $body, $headers)) {
     echo "success";
 } else {
     echo "error";
 }
-
-$stmt->close();
-$conn->close();
 ?>
