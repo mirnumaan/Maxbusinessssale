@@ -8,7 +8,7 @@ $message = isset($_POST['message']) ? htmlspecialchars($_POST['message']) : '';
 $confidentiality = isset($_POST['confidentiality']) ? 'Agreed' : 'Not agreed';
 
 // Your email address
-$to = "your@email.com";
+$to = "mirnumaan06@gmail.com";
 
 // Subject
 $subject = "New Contact Form Submission from $name";
