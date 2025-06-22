@@ -1,5 +1,6 @@
 <?php
 // Get form data safely
+$headers = "From: enquiries@maxbusinesssales.com.au";
 $name    = isset($_POST['name']) ? htmlspecialchars($_POST['name']) : '';
 $email   = isset($_POST['email']) ? htmlspecialchars($_POST['email']) : '';
 $phone   = isset($_POST['phone']) ? htmlspecialchars($_POST['phone']) : '';
@@ -17,7 +18,7 @@ $subject = "New Contact Form Submission from $name";
 $body = "Name: $name\nEmail: $email\nPhone: $phone\nBusiness: $business\nMessage: $message\nConfidentiality: $confidentiality";
 
 // Additional headers
-$headers = "From: $email";
+$header  = "From: maxxcllusive@max-xcllusive.com.au";
 
 // Send email
 if (mail($to, $subject, $body, $headers)) {
