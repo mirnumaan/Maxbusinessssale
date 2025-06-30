@@ -18,7 +18,7 @@ $subject = "New Contact Form Submission from $name";
 $body = "Name: $name\nEmail: $email\nPhone: $phone\nBusiness: $business\nMessage: $message\nConfidentiality: $confidentiality";
 
 // Additional headers
-$header  = "From: maxxcllusive@max-xcllusive.com.au";
+$header  = "From: info@max-xcllusive.com.au";
 
 // Send email
 if (mail($to, $subject, $body, $headers)) {
